@@ -1,0 +1,7 @@
+*.elf
+*.hex
+*.o
+*.d
+*.log
+*.swp
+
