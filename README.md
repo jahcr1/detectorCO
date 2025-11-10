@@ -185,7 +185,7 @@ CO = 300
 
 ## 🧑‍💻 Autor
 
-**Martín Contreras </jahcr1>**  
+**Martín Contreras Roldán </jahcr1>**  
 Desarrollador Web / Ingeniería Electrónica  
 📧 martin.contreras.dev@gmail.com  
 🌐 [Mi Portfolio](https://www.martincontrerasdev.com/)
