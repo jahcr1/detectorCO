@@ -1,7 +1,7 @@
 # 🧠 Sistema de Detección de Monóxido de Carbono (CO)
 ### Proyecto Integrador de Informática 2 – 2025 / 2R2 / Grupo 0
 
-**Autor:** Contreras Martín </jahcr1>  
+**Autor:** Contreras Martín 'jahcr1'  
 **Email:** martin.contreras.dev@gmail.com  
 **Repositorio:** [https://github.com/jahcr1/detectorCO]
 
@@ -46,21 +46,22 @@ Los datos se envían por puerto serie a una aplicación en **Linux**, que permit
 
 ## 🧩 Estructura del repositorio
 
+```bash
 detectorCO/
-├── docs/ # Documentación y recursos
-│       └── Trabajo de Detector de CO.pdf
-├── firmware/ # Código Arduino (microcontrolador)
-│ 		├── detector.elf
-│ 		├── detector.hex
-│ 		├── Makefile # Usamos Makefile para compilar varios archivos y configuraciones de manera automática
-│ 		└── src/
-│ 			└── main.cpp
-├── software/ # Código en C++ (PC / Linux)
-│ 		├── read_serial
-│ 		└── src/
-│ 			└── read_serial.cpp
+├── docs/                  # Documentación y recursos
+│   └── Trabajo de Detector de CO.pdf
+├── firmware/              # Código Arduino (microcontrolador)
+│   ├── detector.elf
+│   ├── detector.hex
+│   ├── Makefile           # Archivo Makefile para compilación automatizada
+│   └── src/
+│       └── main.cpp
+├── software/              # Código en C++ (PC / Linux)
+│   ├── read_serial
+│   └── src/
+│       └── read_serial.cpp
 └── README.md
-
+```
 ---
 
 ## 🧠 Dependencias y entorno de desarrollo
@@ -81,13 +82,13 @@ sudo apt install -y arduino-core avrdude
 
 1. Conceder permisos de puerto serie:
 ```bash
- sudo usermod -aG dialout $USER
+sudo usermod -aG dialout $USER
 ```
  >	Luego cerrar sesión o reinicia para aplicar cambios
  
  2. Verificar detección del Arduino: 
 ```bash
- lsusb | grep -i arduino
+lsusb | grep -i arduino
 ls /dev/ttyACM*
 ```
  >	Esto devuelve los datos necesarios del arduino conectado y deberia mostrar el puerto /dev/ttyACM0 ó /dev/ttyUSB0
@@ -98,7 +99,7 @@ ls /dev/ttyACM*
  
  4. Instalación del proyecto desde Github
 ```bash
- git clone git@github.com:jahcr1/detectorCO.git
+git clone git@github.com:jahcr1/detectorCO.git
 cd detectorCO
 ```
  
@@ -109,16 +110,16 @@ cd detectorCO
 🔹Firmware (Arduino)
 Podés compilar y cargar el firmware desde la linea de comandos:
 ```bash
- cd firmware
- make
+cd firmware
+make
 ```
  >	Si el **Makefile** está configurado, generará los archivos **.elf** y **.hex** automaticamente.
  >	También podes abrir **main.cpp** en el IDE de arduino y cargarlo manualmente.
  
  🔹Software en Linux
 ```bash
- cd software
- make
+cd software
+make
 ```
  >	Esto generará el ejecutable **read_serial**
  
@@ -143,11 +144,11 @@ screen /dev/ttyACM0 9600
 ---
 
 ## 📊 Ejemplo de salida
-
+```bash
 CO = 130
 CO = 150
 CO = 300
-
+```
 ---
 
 ## 🧪 Pruebas y calibración
@@ -176,9 +177,18 @@ CO = 300
 
 3. Kumar, S. et al. “Design and Implementation of a Low-Cost Carbon Monoxide Detector”, International Journal of Sensor Networks, 2021.
 
-4. Prometec – Sensores MQ
+4. Prometec – Sensores MQ[https://www.prometec.net/sensores-de-gas-serie-mq/]
 
-5. Video demostrativo del proyecto
+5. Video demostrativo del proyecto[https://www.youtube.com/watch?v=ihxuKCD-zFw&t=42s]
+
+---
+
+## 🧑‍💻 Autor
+
+**Martín Contreras </jahcr1>**  
+Desarrollador Web / Ingeniería Electrónica  
+📧 martin.contreras.dev@gmail.com  
+🌐 [Mi Portfolio](https://www.martincontrerasdev.com/)
 
 ---
 
